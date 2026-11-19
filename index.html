@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>UTAR WiFi Helper</title>
+<meta name="description" content="Log in to UTAR school WiFi automatically. Free for Windows and Android.">
+<link rel="icon" href="logo.png">
+<!-- Google AdSense: paste the code Google gives you here after your site is approved. -->
+<style>
+  :root {
+    --bg: #f6f8fb; --card: #ffffff; --text: #14213d; --muted: #5b6475;
+    --accent: #1565c0; --accent-text: #ffffff; --border: #e2e7ef;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #0f1522; --card: #182033; --text: #eef2f8; --muted: #a3adbf;
+            --accent: #4f9cf0; --accent-text: #0b1220; --border: #263049; }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text);
+         font: 16px/1.6 "Segoe UI", system-ui, -apple-system, Roboto, sans-serif; }
+  main { max-width: 760px; margin: 0 auto; padding: 48px 16px 32px; }
+  header { text-align: center; }
+  header img { width: 96px; height: 96px; border-radius: 22px; }
+  h1 { font-size: 2.1rem; margin: 16px 0 8px; }
+  .lead { color: var(--muted); font-size: 1.15rem; margin: 0 auto 32px; max-width: 520px; }
+  .downloads { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 24px; }
+  .card h2 { margin: 0 0 4px; font-size: 1.25rem; }
+  .card p { margin: 0 0 16px; color: var(--muted); font-size: .95rem; }
+  .btn { display: block; text-align: center; background: var(--accent); color: var(--accent-text);
+         text-decoration: none; font-weight: 600; padding: 12px 16px; border-radius: 10px; }
+  .btn:hover { filter: brightness(1.08); }
+  section { margin-top: 40px; }
+  section h2 { font-size: 1.3rem; }
+  ul { padding-left: 20px; }
+  li { margin-bottom: 6px; }
+  .note { font-size: .9rem; color: var(--muted); }
+  footer { max-width: 760px; margin: 0 auto; padding: 24px 16px 48px; color: var(--muted);
+           font-size: .85rem; border-top: 1px solid var(--border); }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <img src="logo.png" alt="UTAR WiFi Helper logo">
+    <h1>UTAR WiFi Helper</h1>
+    <p class="lead">Stop typing your login every time. This app signs you in to UTAR WiFi for you, automatically.</p>
+  </header>
+
+  <div class="downloads">
+    <div class="card">
+      <h2>Windows</h2>
+      <p>For laptops and PCs. Version 1.0.3, free.</p>
+      <a class="btn" href="https://github.com/3ug1n3/utar-wifi-helper/releases/latest/download/UTAR-WiFi-Helper-Setup.exe">Download for Windows</a>
+    </div>
+    <div class="card">
+      <h2>Android</h2>
+      <p>For phones and tablets. Free on Google Play.</p>
+      <a class="btn" href="https://play.google.com/store/apps/details?id=com.student.wifihelper">Get it on Google Play</a>
+    </div>
+  </div>
+
+  <section>
+    <h2>What it does</h2>
+    <ul>
+      <li>Logs you in to <strong>utarwifi</strong> automatically</li>
+      <li>Reconnects after your laptop wakes from sleep</li>
+      <li>Can start with Windows and run quietly near the clock</li>
+      <li>Remembers your login, so you only type it once</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Installing on Windows</h2>
+    <ol>
+      <li>Download the setup file and open it.</li>
+      <li>If you see <em>"Windows protected your PC"</em>, click <strong>More info</strong>, then <strong>Run anyway</strong>. This happens because the app is new, not because it's harmful.</li>
+      <li>Click Next until it's done, then enter your UTAR login once.</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>Your password is safe</h2>
+    <p>Your login is saved only on your own device and is sent only to the official UTAR WiFi login page. It is never sent to us or anyone else.</p>
+  </section>
+</main>
+<footer>
+  This is an independent student project. It is not made, endorsed or supported by Universiti Tunku Abdul Rahman (UTAR).
+</footer>
+</body>
+</html>
