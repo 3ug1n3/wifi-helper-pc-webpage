@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>UTAR Confession · WiFi Helper</title>
+<meta property="og:title" content="A UTAR Confession was shared with you">
+<meta property="og:description" content="Open it in the WiFi Helper app.">
+<meta property="og:image" content="logo.png">
+<style>
+  body { margin: 0; min-height: 100vh; display: flex; align-items: center; justify-content: center;
+         background: #8197E3; font-family: system-ui, -apple-system, "Segoe UI", sans-serif; color: #1F3A35; }
+  .card { background: #fff; border-radius: 22px; padding: 32px 24px; margin: 16px; max-width: 360px; width: 100%;
+          text-align: center; box-sizing: border-box; }
+  img { width: 72px; height: 72px; border-radius: 18px; }
+  h1 { font-size: 22px; margin: 16px 0 8px; }
+  p { color: #636A78; font-size: 15px; margin: 0 0 24px; }
+  a.btn { display: block; padding: 14px; border-radius: 999px; font-weight: 800; text-decoration: none; margin-top: 12px; }
+  .open { background: #5DC1A9; color: #1F3A35; }
+  .get { border: 2px solid #8197E3; color: #5E76CC; }
+</style>
+</head>
+<body>
+<div class="card">
+  <img src="logo.png" alt="">
+  <h1>A UTAR Confession was shared with you</h1>
+  <p>Open it in the WiFi Helper app.</p>
+  <a class="btn open" id="open" href="#">Open in WiFi Helper</a>
+  <a class="btn get" href="https://play.google.com/store/apps/details?id=com.student.wifihelper">Get the app</a>
+</div>
+<script>
+  // Only letters, numbers, _ and - are allowed in a confession id.
+  var id = new URLSearchParams(location.search).get("id") || "";
+  if (!/^[A-Za-z0-9_-]{1,64}$/.test(id)) id = "";
+  var play = "https://play.google.com/store/apps/details?id=com.student.wifihelper";
+  document.getElementById("open").href = id
+    ? "intent://confession/" + id + "#Intent;scheme=wifihelper;package=com.student.wifihelper;S.browser_fallback_url=" + encodeURIComponent(play) + ";end"
+    : play;
+</script>
+</body>
+</html>
